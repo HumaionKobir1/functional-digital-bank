@@ -3,11 +3,11 @@ body{
     background-size: cover;
 }
 
-.submit-area{
-    margin-top: 50px;
+#deposit, #withdraw{
     padding: 40px;
     border-radius: 20px;
-    box-shadow: 5px 5px 10px gray;
+    box-shadow:  5px 5px 5px rgb(255, 0, 242);
+    
 }
 
 #banner-area{
