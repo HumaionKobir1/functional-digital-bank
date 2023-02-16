@@ -6,7 +6,7 @@ function getInputFieldValueById(inputFieldId){
     return inputFieldValue;
     // console.log(inputFieldValue);
 }
-function getElementValueById(elementId){
+function getTextElementValueById(elementId){
     const textElement = document.getElementById(elementId);
     const textElementValueString = textElement.innerText;
     const textElemetValue = parseFloat(textElementValueString);
