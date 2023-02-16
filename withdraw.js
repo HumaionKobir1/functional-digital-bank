@@ -9,12 +9,16 @@
 
 function withdrawBtn(){
     const newWithdrawAmount = getInputFieldValueById('withdraw-field');
-    console.log(newWithdrawAmount);
     const previousWithdrawTotal = getTextElementValueById('withdraw-total');
-    console.log(previousWithdrawTotal);
+    const previousBalanceTotal = getTextElementValueById('balance-total');
+
+    if(newWithdrawAmount > previousBalanceTotal){
+        alert("Your account doesn't have enough money");
+        return;
+    }
+    
     const newWithdrawTotal = previousWithdrawTotal + newWithdrawAmount;
     setTextElementValueById('withdraw-total', newWithdrawTotal);
-    const previousBalanceTotal = getTextElementValueById('balance-total');
     const newBalanceTotal = previousBalanceTotal - newWithdrawAmount;
     console.log(newBalanceTotal);
     setTextElementValueById('balance-total', newBalanceTotal);
